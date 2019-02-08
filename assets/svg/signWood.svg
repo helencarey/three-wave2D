@@ -1,0 +1,8 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.1 56.01">
+  <title>signWood</title>
+  <path d="M2,0H85.1a5,5,0,0,1,5,5V54a2,2,0,0,1-2,2H4a4,4,0,0,1-4-4V2A2,2,0,0,1,2,0Z" style="fill: #87786e"/>
+  <rect width="87.85" height="54.23" rx="2" style="fill: #ad9984"/>
+  <path d="M0,29.22H87.85a0,0,0,0,1,0,0v23a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2v-23a0,0,0,0,1,0,0Z" style="fill: #a3907e"/>
+  <rect x="30.44" y="8.04" width="52.36" height="13.88" rx="2" style="fill: #b5a08c"/>
+  <path d="M83.42,49.2H5.2V6.47H83.42ZM6.37,48H82.25V7.64H6.37Z" style="fill: #d8c2a4"/>
+</svg>

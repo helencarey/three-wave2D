@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>whatevGL</title>
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,400i,700,700i" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+<div class="app-body">
+  <div class="layout-main">
+
+    <div class="screen-bg">
+      <div class="img-bg"></div>
+
+			<div id="webgl-container">
+				<div id="webgl"></div>
+				<div class="resetTxt">Reset Target</div>
+				<div id="fzText">####</div>
+			</div>
+
+			<div class="screen-nav"></div>
+
+		</div> <!-- end .screen-bg -->
+  </div> <!-- end .layout-main -->
+</div> <!-- end .app-body -->
+
+  <div id="stats-output"></div>
+
+<!-- ============================================================= -->
+  <!-- LIBS -->
+
+  <!-- vendor: THREE & plugins -->
+  <script src="/vendor/three/three.min.js"></script>
+	<script src="/vendor/three/SVGLoader.js"></script>
+  <script src="/vendor/three/stats.min.js"></script>
+
+	<!-- vendor: other -->
+	<script src="/vendor/dat.gui.min.js"></script>
+  <!-- <script src="/vendor/perlin.js"></script> -->
+
+
+  <!-- our lib -->
+	<script src="/js/lib/draw.js"></script>
+	<script src="/js/lib/dim.js"></script>
+	<script src="/js/lib/debug.js"></script>
+	<script src="/js/lib/util_svgToMesh.js"></script>
+	<!-- <script src="/js/c/raycast.js"></script> -->
+
+
+  <!-- meshes &  mats -->
+	<script src="/js/lib/mats.js"></script>
+	<script src="/js/mesh/static/wavePlaceholders.js"></script>
+	<script src="/js/mesh/static/foamGroup.js"></script>
+
+	<script src="/js/mesh/static/postRight.js"></script>
+	<script src="/js/mesh/static/postLeft.js"></script>
+	<script src="/js/mesh/static/slider.js"></script>
+	<script src="/js/mesh/static/bubBtn.js"></script>
+
+
+	<script src="/js/mesh/mesh-static.js"></script>
+
+  <script src="/js/mesh/mesh-wave.js"></script>
+	<!-- <script src="/js/mesh/foam.js"></script> -->
+
+  <!-- <script src="/js/mesh/mesh-maker.js"></script> -->
+
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

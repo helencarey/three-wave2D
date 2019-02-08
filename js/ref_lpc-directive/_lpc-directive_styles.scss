@@ -1,0 +1,212 @@
+// ================================================
+// LAYOUT
+// ================================================
+
+lpc-directive { // Parent ele. Layout class.
+	display: -webkit-flex;
+	-webkit-flex: 1;
+	margin: auto;
+	flex-flow: row;
+	width: 100%;
+  height: 100%;
+  justify-content: space-around;
+	//border: 1px solid red;
+
+	.lpc-contentBox { // Container class.
+		// Holds LPC and any .button-side-containers
+	  width: 100%;
+	  height: 100%;
+		//border: 1px solid lime;
+	}
+}
+
+// Should always be desc. of .lpc-contentBox
+// Generic responsive styles are set here.
+// NB: Downstream stylesheets (Profiles, Tutorial, & Practice-Directive) use this id to set canvas size and position from within their layout.
+#lpc-canvas-parentSize {
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.reset-button {
+	margin-top: 0px;
+  margin-right: 0px;
+	//border: 1px solid cyan;
+}
+
+// ================================================
+// RATING + RESET BUTTONS
+// ================================================
+
+.button-side-container {
+  position:absolute;
+	right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: $col-w * 2;
+	//border: 1px solid red;
+
+  &.rateBtn-container {
+    top: $row-h * 0.75;
+    height: $row-h * 2;
+  }
+
+  &.ctlBtn-container {
+    top: $row-h * 0.75 + 40vh;
+  }
+}
+
+ .rateBtn {
+	display: flex;
+  width: 100%;
+	height: $row-h * 0.64;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  user-select: none;
+	z-index: 50;
+}
+
+ .rateBtn-textbox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 76px;
+  height: 49px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+	padding: 0 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+	line-height: 1.2em;
+  color: white;
+  // border: 1px solid red;
+}
+
+ .rate-gold {
+  background-image: url("../img/rateBtns/rate-gold--off.svg");
+	background-repeat: no-repeat;
+	background-position: right center;
+	&:active {
+		background-image: url("../img/rateBtns/rate-gold--on.svg");
+	}
+	.rateBtn-textbox {
+		background-color: #ffc95f;
+	}
+}
+
+ .rate-silver {
+	background-image: url("../img/rateBtns/rate-silver--off.svg");
+	background-repeat: no-repeat;
+	background-position: right center;
+	&:active {
+		background-image: url("../img/rateBtns/rate-silver--on.svg");
+	}
+	.rateBtn-textbox {
+	  background-color: #f0f9fc;
+	  color: #408BA2;
+	}
+}
+
+ .rate-bronze {
+	background-image: url("../img/rateBtns/rate-bronze--off.svg");
+	background-repeat: no-repeat;
+	background-position: right center;
+	&:active {
+		background-image: url("../img/rateBtns/rate-bronze--on.svg");
+	}
+	.rateBtn-textbox {
+		background-color: #efbd88;
+	}
+ }
+
+ // ================================================
+ // SLIDER & SAND
+ // ================================================
+
+.lpc-range {
+	height: 400px;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	z-index: 9999999999;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	input {
+		background: transparent;
+	}
+}
+
+.lpc-container input[type='range'] {
+	background-color: transparent;
+	box-shadow: none;
+	overflow: visible;
+	position: absolute;
+	bottom: 72px;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+
+	&::-webkit-slider-thumb {
+		height: 400px;
+		display: block;
+		background: url('../img/star2.svg') no-repeat;
+		background-size: 50px 50px;
+		background-position: center bottom;
+		box-shadow: none;
+		border-radius: 0;
+		position: relative;
+		bottom: 100px;
+	}
+}
+
+.lpc-container output {
+	position: absolute;
+	top: 20px;
+	display: block;
+	width: 50px;
+	height: 24px;
+	border: 1px solid #e2e2e2;
+	background-color: #fff;
+	border-radius: 3px;
+	color: $grey-txtMain;
+	font-size: .8em;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+
+	&:after
+	{
+		content: '';
+		height: 350px;
+		width: 2px;
+		background-color: white;
+		display: block;
+		margin-left: 50%;
+		margin-right: 50%;
+		position: absolute;
+		top: -30px;
+		z-index: -1;
+	}
+
+}
+
+#sand {
+	height: 60px;
+	display: block;
+	position: absolute;
+	left: -1px;
+	bottom: 0px;
+	width: 100.3%;
+	background-color: $yellow-main;
+}

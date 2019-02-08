@@ -1,0 +1,19 @@
+{
+  "name": "three-wave2d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "live-server",
+    "lint": "eslint ./js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hc",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "live-server": "^1.2.1"
+  }
+}
